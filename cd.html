@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-4.6.1-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-4.6.1-dist/js/jquery-3.6.0.min.js"></script>
+    <script src="./bootstrap-4.6.1-dist//js/bootstrap.bundle.min.js"></script>
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: aquamarine;
+        }
+
+        .kuangjia {
+            padding: 20px;
+            width: 200px;
+            min-height: 500px;
+            background-color: #fff;
+            margin: 25px auto;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="kuangjia">
+        <div id="zhedie">
+            <a id="zk">全部展开</a>&nbsp;|
+            <a id="zd">全部折叠</a>
+        </div>
+        <div class="container">
+            <button type="button" class="btn btn-primary col-12" data-toggle="collapse" data-target="#cd1">
+                菜单一
+            </button>
+
+            <div id="cd1" class="collapse in text-center">
+                <p>菜单1</p>
+                <p>菜单2</p>
+                <p>菜单3</p>
+            </div>
+        </div>
+        <p></p>
+        <div class="container">
+            <button type="button" class="btn btn-primary col-12" data-toggle="collapse" data-target="#cd2">
+                菜单二
+            </button>
+
+            <div id="cd2" class="collapse in text-center">
+                <p>菜单1</p>
+                <p>菜单2</p>
+                <p>菜单3</p>
+            </div>
+        </div>
+        <p></p>
+        <div class="container">
+            <button type="button" class="btn btn-primary col-12" data-toggle="collapse" data-target="#cd3">
+                菜单三
+            </button>
+
+            <div id="cd3" class="collapse in text-center">
+                <p>菜单1</p>
+                <p>菜单2</p>
+                <p>菜单3</p>
+            </div>
+        </div>
+        <p></p>
+        <div class="container">
+            <button type="button" class="btn btn-primary col-12" data-toggle="collapse" data-target="#cd4">
+                菜单四
+            </button>
+
+            <div id="cd4" class="collapse in text-center">
+                <p>菜单1</p>
+                <p>菜单2</p>
+                <p>菜单3</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var zd = document.getElementById("zd");
+        zd.onclick = function () {
+            zhedie(cd1);
+            zhedie(cd2);
+            zhedie(cd3);
+            zhedie(cd4);
+        }
+        var zk = document.getElementById("zk");
+        zk.onclick = function () {
+            zhankai(cd1);
+            zhankai(cd2);
+            zhankai(cd3);
+            zhankai(cd4);
+        }
+        function zhankai(element) {
+            for (var i = 0; i < element.children.length; i++) {
+                var ch = element.children[i];
+                ch.style.display = "block";
+            }
+        }
+        function zhedie(element) {
+            for (var i = 0; i < element.children.length; i++) {
+                var ch = element.children[i];
+                ch.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
